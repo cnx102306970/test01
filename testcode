@@ -1,0 +1,21 @@
+/****** Test  ******/
+
+/** Prediction data **/
+--DROP TABLE [dbo].[sampletable]
+
+CREATE TABLE [dbo].[sampletable]
+(
+	[A] [int] NULL,
+	[B] [int] NULL,
+	[C] [int] NULL
+)
+WITH
+(
+	DISTRIBUTION = ROUND_ROBIN,
+	CLUSTERED COLUMNSTORE INDEX
+)
+GO
+
+/** Insert a sample row for the prediction data **/
+INSERT INTO [dbo].[sampletable]
+VALUES (1,1,1);
