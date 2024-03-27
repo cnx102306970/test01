@@ -1,0 +1,14 @@
+{
+	"name": "detaflowlib",
+	"properties": {
+		"type": "UDFLibrary",
+		"typeProperties": {
+			"sources": [],
+			"sinks": [],
+			"transformations": [],
+			"scriptLines": [
+				"dataflowkansuu() as integer = abs(1)"
+			]
+		}
+	}
+}
