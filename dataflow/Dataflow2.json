@@ -26,12 +26,6 @@
 					"name": "filter1"
 				}
 			],
-			"udfLibraries": [
-				{
-					"referenceName": "detaflowlib",
-					"type": "DataFlowReference"
-				}
-			],
 			"scriptLines": [
 				"source(output(",
 				"          A as string,",
@@ -41,7 +35,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: true) ~> source1",
-				"source1 filter(dataflowkansuu()) ~> filter1",
+				"source1 filter(ERROR_FUNCTION('')) ~> filter1",
 				"filter1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
